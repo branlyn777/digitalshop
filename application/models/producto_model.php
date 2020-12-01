@@ -32,7 +32,7 @@ class Producto_model extends CI_Model {
 	}
 
 
-	
+	//Para cambiar el estado del producto ha 0
 	public function eliminarproducto($idproducto,$data)
 	{
 		$this->db->where('idproducto',$idproducto);
