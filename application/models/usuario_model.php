@@ -49,15 +49,6 @@ class Usuario_model extends CI_Model {
 		return $this->db->get();
 	}
 
-
-
-
-
-
-
-
-
-
 	public function validarcontrasena($idusuario,$contrasena)
 	{
 		$this->db->select('contrasena');
