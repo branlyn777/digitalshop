@@ -88,16 +88,8 @@
                   </div>
                   <!-- START User links collapse-->
                   <ul class="nav collapse">
-                     <li><a href=" <?php echo base_url(); ?>47admin/#">Perfil</a>
-                     </li>
-                     <li><a href=" <?php echo base_url(); ?>47admin/#">Ajustes</a>
-                     </li>
-                     <li><a href=" <?php echo base_url(); ?>47admin/#">Notificaciones<div class="label label-danger pull-right">120</div></a>
-                     </li>
-                     <li><a href=" <?php echo base_url(); ?>47admin/#">Mensajes<div class="label label-success pull-right">300</div></a>
-                     </li>
-                     <li class="divider"></li>
-                     <li><a href=" <?php echo base_url(); ?>47admin/#">Cerrar Sesión</a>
+ 
+                     <li><a href="">Cerrar Sesión</a>
                      </li>
                   </ul>
                   <!-- END User links collapse-->
@@ -118,12 +110,7 @@
                         </a>
                      </li>
                      <li>
-                        <a href="<?php echo base_url(); ?>index.php/usuarios/inicio" title="No Sidebar" data-toggle="" class="no-submenu">
-                           <span class="item-text">Inicio 2</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href=" <?php echo base_url(); ?>47admin/dashboard-noprofile.html" title="No Profile" data-toggle="" class="no-submenu">
+                        <a href="" title="No Profile" data-toggle="" class="no-submenu">
                            <span class="item-text">Cerrar Sesión</span>
                         </a>
                      </li>
@@ -142,11 +129,7 @@
                            <span class="item-text">Lista de Usuarios</span>
                         </a>
                      </li>
-                     <li>
-                        <a href=" <?php echo base_url(); ?>47admin/chart-radial.html" title="Radial" data-toggle="" class="no-submenu">
-                           <span class="item-text">Estado Usuarios</span>
-                        </a>
-                     </li>
+
                   </ul>
                   <!-- END SubMenu item-->
                </li>
@@ -183,20 +166,11 @@
                   <!-- START SubMenu item-->
                   <ul class="nav collapse ">
                      <li>
-                        <a href=" <?php echo base_url(); ?>47admin/form-standard.html" title="Standard" data-toggle="" class="no-submenu">
+                        <a href="" title="Standard" data-toggle="" class="no-submenu">
                            <span class="item-text">Lista de Clientes</span>
                         </a>
                      </li>
-                     <li>
-                        <a href=" <?php echo base_url(); ?>47admin/form-extended.html" title="Extended" data-toggle="" class="no-submenu">
-                           <span class="item-text">Agrergar Cliente</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href=" <?php echo base_url(); ?>47admin/form-validation.html" title="Validation" data-toggle="" class="no-submenu">
-                           <span class="item-text">Reporte Clientes</span>
-                        </a>
-                     </li>
+  
                   </ul>
                   <!-- END SubMenu item-->
                </li>
@@ -212,20 +186,60 @@
                            <span class="item-text">Lista de Productos</span>
                         </a>
                      </li>
+                  </ul>
+                  <!-- END SubMenu item-->
+               </li>
+
+
+
+
+
+
+               <?php
+
+               $idusuario = $this->session->userdata('idusuario');
+               $consult = $this->usuario_model->obtenercargo($idusuario);
+               $rol = $consult[0]->rolusuario;
+
+
+               if ($rol == 'Administrador' ) {
+               ?>
+
+
+               <li>
+                  <a href=" <?php echo base_url(); ?>47admin/#" title="Forms" data-toggle="collapse-next" class="has-submenu">
+                     <em class="fa fa-folder-open fa-2x"></em>
+                     <span class="item-text">Reportes</span>
+                  </a>
+                  <!-- START SubMenu item-->
+                  <ul class="nav collapse ">
                      <li>
-                        <a href="<?php echo base_url(); ?>index.php/smartphones/listasmartphones" title="Landing" data-toggle="" class="no-submenu">
-                           <span class="item-text">Lista Smartphones</span>
+                        <a href="<?php echo base_url(); ?>index.php/reportes/listareporteventas" title="Standard" data-toggle="" class="no-submenu">
+                           <span class="item-text">Reporte de Ventas</span>
                         </a>
                      </li>
                      <li>
-                        <a href=" <?php echo base_url(); ?>47admin/form-validation.html" title="Validation" data-toggle="" class="no-submenu">
-                           <span class="item-text">Reporte Clientes</span>
+                        <a href="<?php echo base_url(); ?>index.php/reportes/listareporteproductos" title="Extended" data-toggle="" class="no-submenu">
+                           <span class="item-text">Reporte Ventas por Productos</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="<?php echo base_url(); ?>index.php/reportes/listareporteusuarios" title="Extended" data-toggle="" class="no-submenu">
+                           <span class="item-text">Reporte Ventas por Usuario</span>
                         </a>
                      </li>
                   </ul>
                   <!-- END SubMenu item-->
                </li>
-               <li>
+
+
+
+               <?php
+               }
+               else
+               {
+                  ?>
+                  <li>
                   <a href=" <?php echo base_url(); ?>47admin/#" title="Forms" data-toggle="collapse-next" class="has-submenu">
                      <em class="fa fa-money fa-2x"></em>
                      <span class="item-text">Ventas</span>
@@ -233,62 +247,43 @@
                   <!-- START SubMenu item-->
                   <ul class="nav collapse ">
                      <li>
-                        <a href=" <?php echo base_url(); ?>47admin/form-standard.html" title="Standard" data-toggle="" class="no-submenu">
-                           <span class="item-text">Tabla Ventas</span>
+                        <a href="<?php echo base_url(); ?>index.php/ventas/listaventas" title="Standard" data-toggle="" class="no-submenu">
+                           <span class="item-text">Realizar una Venta</span>
                         </a>
                      </li>
-                     <li>
+<!--                      <li>
                         <a href=" <?php echo base_url(); ?>47admin/form-extended.html" title="Extended" data-toggle="" class="no-submenu">
-                           <span class="item-text">Reporte Ventas</span>
+                           <span class="item-text">--------</span>
                         </a>
-                     </li>
+                     </li> -->
                   </ul>
                   <!-- END SubMenu item-->
                </li>
-               <li>
-                  <a href=" <?php echo base_url(); ?>47admin/#" title="Elements" data-toggle="collapse-next" class="has-submenu">
-                     <em class="fa fa-shopping-cart fa-2x"></em>
-                     <span class="item-text">Compras</span>
-                  </a>
-                  <!-- START SubMenu item-->
-                  <ul class="nav collapse ">
-                     <li>
-                        <a href=" <?php echo base_url(); ?>47admin/panels.html" title="Panels" data-toggle="" class="no-submenu">
-                           <span class="item-text">Tabla Compras</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href=" <?php echo base_url(); ?>47admin/portlets.html" title="Portlets" data-toggle="" class="no-submenu">
-                           <span class="item-text">Compras Smartphones</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href=" <?php echo base_url(); ?>47admin/button.html" title="Buttons" data-toggle="" class="no-submenu">
-                           <span class="item-text">Compras Accesorios</span>
-                        </a>
-                     </li>
-                  </ul>
-                  <!-- END SubMenu item-->
-               </li>
-               <!-- END Menu-->
-               <!-- Sidebar footer    -->
-               <li class="nav-footer">
-                  <div class="nav-footer-divider"></div>
-                  <!-- START button group-->
-                  <div class="btn-group text-center">
-                     <button type="button" data-toggle="tooltip" data-title="Add Contact" class="btn btn-link">
-                        <em class="fa fa-user text-muted"><sup class="fa fa-plus"></sup>
-                        </em>
-                     </button>
-                     <button type="button" data-toggle="tooltip" data-title="Settings" class="btn btn-link">
-                        <em class="fa fa-cog text-muted"></em>
-                     </button>
-                     <button type="button" data-toggle="tooltip" data-title="Logout" class="btn btn-link">
-                        <em class="fa fa-sign-out text-muted"></em>
-                     </button>
-                  </div>
-                  <!-- END button group-->
-               </li>
+                  <?php
+               }
+               ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </ul>
          </nav>
          <!-- END Sidebar (left)-->
