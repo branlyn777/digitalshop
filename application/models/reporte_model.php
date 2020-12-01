@@ -49,7 +49,7 @@ class Reporte_model extends CI_Model {
 		return $this->db->get();
 	}
 
-
+	//Para mostrar detalles de los productos por fecha
 	public function listareportventasproductosfiltrar($inicio, $fin)
 	{
 		$this->db->select("vp.idproducto as 'idproducto',p.descripcion as 'descripcion', p.cantidad as 'cantidadrestante',sum(vp.cantidad) as 'cantidadvendida',(p.preciobase-p.costobase) as 'ganancianeta'");
