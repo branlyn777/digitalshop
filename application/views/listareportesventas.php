@@ -34,11 +34,6 @@
    <!--Estilos para las Tablas-->
    <style type="text/css"></style>
 
-
-
-
-
-
 </head>
 
 <body>
@@ -174,9 +169,6 @@
                </li>
 
 
-
-
-
                <?php
 
                $idusuario = $this->session->userdata('idusuario');
@@ -292,8 +284,6 @@
                   </ul>
                   <!-- END SubMenu item-->
                </li>
-
-
 
                <?php
 
@@ -417,25 +407,6 @@
             <br>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
              <?php
                 $atributos = array('class' => 'form-group', 'idproducto' => 'myform');
                 echo form_open_multipart('reportes/listareporteventasfiltrar',$atributos);
@@ -472,27 +443,6 @@
                </div>
                
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -627,30 +577,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
          
          </section>
          <!-- END Page content-->
@@ -658,32 +584,6 @@
       <!-- END Main section-->
    </section>
    <!-- END Main wrapper-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -798,23 +698,6 @@
 
 
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
