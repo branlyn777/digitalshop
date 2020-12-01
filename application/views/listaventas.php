@@ -94,12 +94,12 @@
                   <ul class="dropdown-menu">
 
                      <li class="divider"></li>
-                     <li><a href=" <?php echo base_url(); ?>47admin/#">Perfil</a>
+ <!--                     <li><a href=" <?php echo base_url(); ?>47admin/#">Perfil</a>
                      </li>
                      <li><a href=" <?php echo base_url(); ?>47admin/#">Ajustes</a>
                      </li>
                      <li><a href=" <?php echo base_url(); ?>47admin/#">Notificaciones<div class="label label-info pull-right">0</div></a>
-                     </li>
+                     </li> -->
                      <li><a href="<?php echo base_url(); ?>index.php/usuarios/logout">Cerrar Sesión</a>
                      </li>
                   </ul>
@@ -145,14 +145,14 @@
                   </div>
                   <!-- START User links collapse-->
                   <ul class="nav collapse">
-                     <li><a href=" <?php echo base_url(); ?>47admin/#">Perfil</a>
+<!--                      <li><a href=" <?php echo base_url(); ?>47admin/#">Perfil</a>
                      </li>
                      <li><a href=" <?php echo base_url(); ?>47admin/#">Ajustes</a>
                      </li>
                      <li><a href=" <?php echo base_url(); ?>47admin/#">Notificaciones<div class="label label-danger pull-right">120</div></a>
                      </li>
                      <li><a href=" <?php echo base_url(); ?>47admin/#">Mensajes<div class="label label-success pull-right">300</div></a>
-                     </li>
+                     </li> -->
                      <li class="divider"></li>
                      <li><a href="<?php echo base_url(); ?>index.php/usuarios/logout">Cerrar Sesión</a>
                      </li>
@@ -174,7 +174,7 @@
                            <span class="item-text">Inicio</span>
                         </a>
                      </li>
-                     <li>
+ <!--                     <li>
                         <a href="<?php echo base_url(); ?>index.php/usuarios/inicio" title="No Sidebar" data-toggle="" class="no-submenu">
                            <span class="item-text">Inicio 2</span>
                         </a>
@@ -188,7 +188,7 @@
                         <a href="<?php echo base_url(); ?>index.php/usuarios/maps2" title="Radial" data-toggle="" class="no-submenu">
                            <span class="item-text">Mapas</span>
                         </a>
-                     </li>                     
+                     </li>   -->                   
                   </ul>
                   <!-- END SubMenu item-->
                </li>
@@ -270,11 +270,11 @@
                   <!-- START SubMenu item-->
                   <ul class="nav collapse ">
                      <li>
-                        <a href=" <?php echo base_url(); ?>47admin/form-standard.html" title="Standard" data-toggle="" class="no-submenu">
+                        <a href="" title="Standard" data-toggle="" class="no-submenu">
                            <span class="item-text">Lista de Clientes</span>
                         </a>
                      </li>
-                     <li>
+<!--                      <li>
                         <a href=" <?php echo base_url(); ?>47admin/form-extended.html" title="Extended" data-toggle="" class="no-submenu">
                            <span class="item-text">Agregar Cliente</span>
                         </a>
@@ -283,7 +283,7 @@
                         <a href=" <?php echo base_url(); ?>47admin/form-validation.html" title="Validation" data-toggle="" class="no-submenu">
                            <span class="item-text">Reporte Clientes</span>
                         </a>
-                     </li>
+                     </li> -->
                   </ul>
                   <!-- END SubMenu item-->
                </li>
@@ -299,7 +299,7 @@
                            <span class="item-text">Lista de Productos</span>
                         </a>
                      </li>
-                     <li>
+<!--                      <li>
                         <a href="<?php echo base_url(); ?>index.php/smartphones/listasmartphones" title="Landing" data-toggle="" class="no-submenu">
                            <span class="item-text">Lista Smartphones</span>
                         </a>
@@ -308,7 +308,7 @@
                         <a href=" <?php echo base_url(); ?>47admin/form-validation.html" title="Validation" data-toggle="" class="no-submenu">
                            <span class="item-text">Reporte Clientes</span>
                         </a>
-                     </li>
+                     </li> -->
                   </ul>
                   <!-- END SubMenu item-->
                </li>
@@ -362,15 +362,15 @@
                   <!-- START SubMenu item-->
                   <ul class="nav collapse ">
                      <li>
-                        <a href=" <?php echo base_url(); ?>47admin/form-standard.html" title="Standard" data-toggle="" class="no-submenu">
+                        <a href="<?php echo base_url(); ?>index.php/ventas/listaventas" title="Standard" data-toggle="" class="no-submenu">
                            <span class="item-text">Realizar una Venta</span>
                         </a>
                      </li>
-                     <li>
+                 <!--     <li>
                         <a href=" <?php echo base_url(); ?>47admin/form-extended.html" title="Extended" data-toggle="" class="no-submenu">
-                           <span class="item-text">Reporte Ventas</span>
+                           <span class="item-text">--------</span>
                         </a>
-                     </li>
+                     </li> -->
                   </ul>
                   <!-- END SubMenu item-->
                </li>
@@ -378,7 +378,7 @@
                }
                ?>
 
-
+<!-- 
 
 
 
@@ -387,7 +387,6 @@
                      <em class="fa fa-shopping-cart fa-2x"></em>
                      <span class="item-text">Compras</span>
                   </a>
-                  <!-- START SubMenu item-->
                   <ul class="nav collapse ">
                      <li>
                         <a href="<?php echo base_url(); ?>index.php/smartphones/comprarsmartphones" title="Panels" data-toggle="" class="no-submenu">
@@ -405,8 +404,7 @@
                         </a>
                      </li>
                   </ul>
-                  <!-- END SubMenu item-->
-               </li>
+               </li> -->
                <!-- END Menu-->
                <!-- Sidebar footer    -->
                <li class="nav-footer">
@@ -470,10 +468,10 @@
                                  <th>No</th>
                                  <th>Nombre Cliente</th>
                                  <th>Número de Carnet</th>
-                                 <th>Producto</th>
-                                 <th>Cantidad</th>
+                                 <th>Cantidad Item's</th>
                                  <th>Fecha de Venta</th>
                                  <th>Observaciones</th>
+                                 <th><center>Detalles</center></th>
                                  <th>Modificar</th>
                                  <th>Eliminar</th>
                               </tr>
@@ -486,19 +484,48 @@
                            ?>
                               <tr class="gradeX">
                                  <th><?php echo $indice; ?></th>
-                                 <td data-title="Nombre Cliente"><?php echo $row['razonsocial']; ?></td>
-                                 <td data-title="Almacenamiento"><?php echo $row['nit']; ?></td>
-                                 <td data-title="Cámara Frontal"><?php echo $row['descripcion']; ?></td>
-                                 <td data-title="Cámara Trasera"><?php echo $row['cantidad']; ?></td>
-                                 <td data-title="Procesador"><?php echo $row['fechaventa']; ?></td>
-                                 <td data-title="Procesador"><?php echo $row['observaciones']; ?></td>
+                                 <td data-title=""><?php echo $row['razonsocial']; ?></td>
+                                 <td data-title=""><?php echo $row['nit']; ?></td>
+                                 <td data-title=""><center><?php echo $row['count(vp.idventa)']; ?></center></td>
+                                 <!--<td data-title="Cámara Trasera"><?php echo $row['cantidad']; ?></td>-->
+                                 <td data-title=""><?php echo $row['fechaventa']; ?></td>
+                                 <td data-title=""><?php echo $row['observaciones']; ?></td>
+                                 <td>
+                                    
+
+
+
+
+
+
+
+
+
+                                 <!-- Button trigger modal-->
+                                 <center>
+                                    <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#<?php echo $row['idventa']; ?>">Detalles</button>
+                                 </center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 </td>     
                                  <td>
                                     <center>
                                        <?php
-                                       $atributos = array('class' => 'form-group','idproducto' => 'myform');
-                                       echo form_open_multipart('productos/modificar',$atributos); 
+                                       $atributos = array('class' => 'form-group','idventa' => 'myform');
+                                       echo form_open_multipart('ventas/modificar',$atributos); 
                                        ?>
-                                       <input type="hidden" name="idcliente" value="<?php echo $row['idcliente']; ?>">
+                                       <input type="hidden" name="idcliente" value="<?php echo $row['idventa']; ?>">
                                        <button type="submit" class="btn btn-primary btn">Modificar</button>
                                        <?php echo form_close(); ?>
                                     </center>
@@ -507,9 +534,9 @@
                                    <center>
                                        <?php
                                        $atributos = array('class' => 'form-group', 'idproducto' => 'myform');
-                                       echo form_open_multipart('productos/eliminarbd',$atributos); ?>
-                                       <input type="hidden" name="idcliente" value="<?php echo $row['idcliente']; ?>">
-                                       <button type="submit" class="btn btn-danger btn">Eliminar</button>
+                                       echo form_open_multipart('ventas/eliminarventa',$atributos); ?>
+                                       <input type="hidden" name="idventa" value="<?php echo $row['idventa']; ?>">
+                                       <button type="submit" class="btnBorrar btn btn-danger">Eliminar</button>
                                        <?php echo form_close(); ?>
                                    </center>
                                  </td> 
@@ -536,6 +563,257 @@
    <!-- END Main wrapper-->
    <!-- START Scripts-->
    <!-- Main vendor Scripts-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!---Creación de las Ventanas Modales para la columna Detalles de la Tabla Lista Ventas---->
+
+<?php 
+      //$listadetalles = $this->venta_model->mostrardetallesventa();
+      foreach ($clientes as $row)
+      {
+
+         ?>
+            <!-- Modal: modalCart -->
+               <div class="modal fade" id="<?php echo $row['idventa']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                 <br>
+                 <br>
+                 <div class="modal-dialog" role="document">
+                   <div class="modal-content">
+                     <!--Header-->
+                     <div class="modal-header">
+                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                         <span aria-hidden="true">x</span>
+                       </button>
+                       <center><h4 class="modal-title" id="myModalLabel">Detalle de la Venta</h4></center>
+                     </div>
+                     <!--Body-->
+                     <div class="modal-body">
+
+                       <table class="table table-hover">
+                         <thead>
+                           <tr>
+                             <th><p>#</p></th>
+                             <th><p align="left">Nombre Producto</p></th>
+                             <th><p><center>Cantidad</center></p></th>
+                             <th><p align="right">Precio</p></th>
+                             <th><p align="right">Total</p></th>
+                           </tr>
+                         </thead>
+                         <tbody>
+                           
+
+
+                           <?php
+                           $listadetalles = $this->venta_model->mostrardetallesventafactura($row['idventa']);
+                           $num = 1;
+                           foreach ($listadetalles->result() as $key)
+                           {
+
+                              ?>
+                                 <tr>
+                                   <th scope="row"><?php echo $num; ?></th>
+                                   <td align="left"><?php echo $key->descripcion; ?></td>
+                                   <td><center><?php echo $key->cantidad; ?></center></td>
+                                   <td align="right"><?php echo $key->precio; ?> Bs</td>
+                                   <td align="right"><?php echo $key->total; ?> Bs</td>
+                                 </tr>
+                              <?php
+                           $num++;
+                           }
+                           ?>
+                              <tr>
+                                <th scope="row"><strong>-</strong></th>
+                                <td align="left"><strong>Totales</strong></td>
+                                <td><center><strong><?php echo $this->venta_model->mostrartotalprecioventafactura($row['idventa'])[0]->sumacantidad; ?></strong></center></td>
+                                <td align="right"><strong><?php echo $this->venta_model->mostrartotalprecioventafactura($row['idventa'])[0]->sumapreciobase; ?> Bs</strong></td>
+                                <td align="right"><strong><?php echo $this->venta_model->mostrartotalprecioventafactura($row['idventa'])[0]->totalsumacantidadprecio; ?> Bs</strong></td>
+                              </tr>
+                        </tbody>
+                     </table>
+
+                     </div>
+                     <!--Footer-->
+                     <div class="modal-footer">
+                       <center>
+
+
+
+                           <?php
+                           $atributos = array('class' => 'form-group','idventa' => 'myform');
+                           echo form_open_multipart('ventas/crearfactura',$atributos); 
+                           ?>
+                           <input type="hidden" name="idcliente" value="<?php echo $row['idventa']; ?>">
+                           <button type="submit" class="btn btn-primary btn">Imprimir Recibo de Venta</button>
+                           <?php echo form_close(); ?>
+                        </center>
+                       <!--<button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>-->
+                     </div>
+
+                   </div>
+                 </div>
+               </div>
+               <!-- Modal: modalCart -->
+         <?php
+
+
+      }
+
+
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Modal: modalCart 
+               <div class="modal fade" id="aaaa" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                 <br>
+                 <br>
+                 <br>
+                 <br>
+                 <br>
+                 <br>
+                 <div class="modal-dialog" role="document">
+                   <div class="modal-content">
+                     <div class="modal-header">
+                       <h4 class="modal-title" id="myModalLabel">Detalle de la Venta</h4>
+                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                         <span aria-hidden="true">×</span>
+                       </button>
+                     </div>
+                     <div class="modal-body">
+
+                       <table class="table table-hover">
+                         <thead>
+                           <tr>
+                             <th>#</th>
+                             <th>Nombre Producto</th>
+                             <th>Precio</th>
+                             <th>Cantidad</th>
+                           </tr>
+                         </thead>
+                         <tbody>
+                           <tr>
+                             <th scope="row">1</th>
+                             <td>dfgdfgdg</td>
+                             <td>454</td>
+                             <td><a><i class="fas fa-times"></i></a></td>
+                           </tr>
+                        </tbody>
+                       </table>
+
+                     </div>
+                     <div class="modal-footer">
+                       <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+                Modal: modalCart -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    <script src=" <?php echo base_url(); ?>47admin/vendor/jquery/jquery.min.js"></script>
    <script src=" <?php echo base_url(); ?>47admin/vendor/bootstrap/js/bootstrap.min.js"></script>
    <!-- Plugins-->
