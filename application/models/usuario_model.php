@@ -10,15 +10,6 @@ class Usuario_model extends CI_Model {
 		$this->db->where('estado',1);
 		return $this->db->get();
 	}
-
-
-	/*ublic function recuperarusuarios($idusuario)
-	{
-		$query=$this->db->get('usuarios');
-		$execonsulta=$query->result();
-		print_r($execonsulta);
-	}*/
-
 	public function recuperarusuario($idusuario)
 	{
 		$this->db->select('*');
