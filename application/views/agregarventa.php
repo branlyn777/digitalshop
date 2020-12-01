@@ -455,27 +455,28 @@
             <div class="parrafo">
 
 
-                      <?php  
+          <?php  
             $idusuario = $this->session->userdata('idusuario');
-         ?>
+          ?>
           <?php
           $atributos = array('class' => 'form-group', 'id' => 'myform', 'idusuario' => $idusuario);
           echo form_open_multipart('ventas/agregarbd',$atributos);
           ?>
 
 
-            <div class="col-lg-4">            
+            <div class="col-lg-4">
+
                   <div class="form-group">
                      <label>Seleccione al Cliente</label>
                      <div>
-                        <select id="cliente" onchange='cambioOpciones();' style="width: 340px;" class="form-control form-control-lg">
+                        <select id="cliente" onchange='cambioOpciones(this.value);' style="width: 340px;" class="chosen-select">
                            <?php
                               $clientela = $this->venta_model->obtenerclientes();
                               foreach ($clientela->result() as $row)
                               {
 
 
-                              echo '<option value="'.$row->razonsocial.'">'
+                              echo '<option value="'.$row->id.'">'
                               ?><?php echo $row->razonsocial; ?></option>
 
 
@@ -494,25 +495,21 @@
 
 
 
-
-
-
-
                         <label>Crear Nuevo Cliente</label>
                         <input type="checkbox" onclick="checkFluency()"  id="fluency" />
                   </div>
 
                   
+               <div class="form-group">
+                     <label>Número de Carnet</label>
+                     <input disabled type="text" placeholder="" minlength="7" maxlength="10" id="carnet" class="form-control" name="nit" required="" required pattern="[A-Za-z0-9]+" title="Letras y números. Tamaño mínimo: 7. Tamaño máximo: 10">
+               </div>
 
 
                   <div class="form-group">
                      <label>Nombre Completo Cliente</label>
                      <input disabled type="text" placeholder="" minlength="5" id="nombre" class="form-control" name="razonsocial" required pattern="[A-Za-z0-9| ]+" title="Letras y números. Tamaño mínimo: 5. Tamaño máximo: 17">
                   </div>
-               <div class="form-group">
-                     <label>Número de Carnet</label>
-                     <input disabled type="text" placeholder="" minlength="7" maxlength="10" id="carnet" class="form-control" name="nit" required="" required pattern="[A-Za-z0-9]+" title="Letras y números. Tamaño mínimo: 7. Tamaño máximo: 10">
-               </div>
                   
 
                </div>
@@ -554,26 +551,6 @@
                <input class="form-control" style="width: 70px;" type="number" required="" name="cantidad">
             </div>
                
-
-
-
-
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 <br>
                   <center>
                      <button type="submit" class="btn btn-primary btn">Vender los Productos Seleccionados</button>
@@ -651,7 +628,7 @@
 
        document.getElementById('nombre').value = "";
        document.getElementById('carnet').value = "";
-       document.getElementById("cliente").value = "";
+       document.getElementById('cliente').value = "";
 
      }
      else
@@ -664,7 +641,7 @@
    }
 
 
-      function cambioOpciones()
+      function cambioOpciones(valor)
       {
          
         var idcliente = document.getElementById("cliente").value;
@@ -714,8 +691,58 @@
 
 
 
-
-
+<script>
+    $(document).ready(function(){
+        // Bloqueamos el SELECT de los cursos
+        $("#slt-cursos").prop('disabled', true);
+        
+        // Hacemos la lógica que cuando nuestro SELECT cambia de valor haga algo
+        $("#slt-alumnos").change(function(){
+            // Guardamos el select de cursos
+            var cursos = $("#slt-cursos");
+            
+            // Guardamos el select de alumnos
+            var alumnos = $(this);
+            
+            if($(this).val() != '')
+            {
+                $.ajax({
+                    data: { id : alumnos.val() },
+                    url:   '?c=Alumno&a=CursosPorAlumno',
+                    type:  'POST',
+                    dataType: 'json',
+                    beforeSend: function () 
+                    {
+                        alumnos.prop('disabled', true);
+                    },
+                    success:  function (r) 
+                    {
+                        alumnos.prop('disabled', false);
+                        
+                        // Limpiamos el select
+                        cursos.find('option').remove();
+                        
+                        $(r).each(function(i, v){ // indice, valor
+                            cursos.append('<option value="' + v.id + '">' + v.Nombre + '</option>');
+                        })
+                        
+                        cursos.prop('disabled', false);
+                    },
+                    error: function()
+                    {
+                        alert('Ocurrio un error en el servidor ..');
+                        alumnos.prop('disabled', false);
+                    }
+                });
+            }
+            else
+            {
+                cursos.find('option').remove();
+                cursos.prop('disabled', true);
+            }
+        })
+    })
+</script>
 
 
 
