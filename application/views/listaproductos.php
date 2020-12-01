@@ -50,7 +50,7 @@
 
          <div class="navbar-header">
  
-            <a href=" <?php echo base_url(); ?>47admin/#" class="navbar-brand">
+            <a href="" class="navbar-brand">
                <div class="brand-logo">Digital Shop</div>
                <div class="brand-logo-collapsed">Inicio</div>
             </a>
@@ -65,246 +65,35 @@
                      <em class="fa fa-align-left"></em>
                   </a>
                </li>
-               <li>
-                  <a href=" <?php echo base_url(); ?>47admin/#" data-toggle="navbar-search">
-                     <em class="fa fa-search"></em>
-                  </a>
-               </li>
             </ul>
             <!-- END Left navbar-->
             <!-- START Right Navbar-->
             <ul class="nav navbar-nav navbar-right">
-               <!-- START Messages menu (dropdown-list)-->
-               <li class="dropdown dropdown-list">
-                  <a href=" <?php echo base_url(); ?>47admin/#" data-toggle="dropdown" data-play="bounceIn" class="dropdown-toggle">
-                     <em class="fa fa-envelope"></em>
-                     <div class="label label-danger">5</div>
-                  </a>
-                  <!-- START Dropdown menu-->
-                  <ul class="dropdown-menu">
-                     <li class="dropdown-menu-header">Usted tiene 5 nuevos Mensajes</li>
-                     <li>
-                        <div class="scroll-viewport">
-                           <!-- START list group-->
-                           <div class="list-group scroll-content">
-                              <!-- START list group item-->
-                              <a href=" <?php echo base_url(); ?>47admin/#" class="list-group-item">
-                                 <div class="media">
-                                    <div class="pull-left">
-                                       <img style="width: 48px; height: 48px;" src=" <?php echo base_url(); ?>47admin/app/img/user/01.jpg" alt="Image" class="media-object img-rounded">
-                                    </div>
-                                    <div class="media-body clearfix">
-                                       <small class="pull-right">2h</small>
-                                       <strong class="media-heading text-primary">
-                                          <div class="point point-success point-lg"></div>Sheila Carter</strong>
-                                       <p class="mb-sm">
-                                          <small>Cras sit amet nibh libero, in gravida nulla. Nulla...</small>
-                                       </p>
-                                    </div>
-                                 </div>
-                              </a>
-                              <!-- END list group item-->
-                              <!-- START list group item-->
-                              <a href=" <?php echo base_url(); ?>47admin/#" class="list-group-item">
-                                 <div class="media">
-                                    <div class="pull-left">
-                                       <img style="width: 48px; height: 48px;" src=" <?php echo base_url(); ?>47admin/app/img/user/04.jpg" alt="Image" class="media-object img-rounded">
-                                    </div>
-                                    <div class="media-body clearfix">
-                                       <small class="pull-right">3h</small>
-                                       <strong class="media-heading text-primary">
-                                          <div class="point point-success point-lg"></div>Rich Reynolds</strong>
-                                       <p class="mb-sm">
-                                          <small>Cras sit amet nibh libero, in gravida nulla. Nulla...</small>
-                                       </p>
-                                    </div>
-                                 </div>
-                              </a>
-                              <!-- END list group item-->
-                              <!-- START list group item-->
-                              <a href=" <?php echo base_url(); ?>47admin/#" class="list-group-item">
-                                 <div class="media">
-                                    <div class="pull-left">
-                                       <img style="width: 48px; height: 48px;" src=" <?php echo base_url(); ?>47admin/app/img/user/03.jpg" alt="Image" class="media-object img-rounded">
-                                    </div>
-                                    <div class="media-body clearfix">
-                                       <small class="pull-right">4h</small>
-                                       <strong class="media-heading text-primary">
-                                          <div class="point point-danger point-lg"></div>Beverley Pierce</strong>
-                                       <p class="mb-sm">
-                                          <small>Cras sit amet nibh libero, in gravida nulla. Nulla...</small>
-                                       </p>
-                                    </div>
-                                 </div>
-                              </a>
-                              <!-- END list group item-->
-                              <!-- START list group item-->
-                              <a href=" <?php echo base_url(); ?>47admin/#" class="list-group-item">
-                                 <div class="media">
-                                    <div class="pull-left">
-                                       <img style="width: 48px; height: 48px;" src=" <?php echo base_url(); ?>47admin/app/img/user/05.jpg" alt="Image" class="media-object img-rounded">
-                                    </div>
-                                    <div class="media-body clearfix">
-                                       <small class="pull-right">4h</small>
-                                       <strong class="media-heading text-primary">
-                                          <div class="point point-danger point-lg"></div>Perry Cole</strong>
-                                       <p class="mb-sm">
-                                          <small>Cras sit amet nibh libero, in gravida nulla. Nulla...</small>
-                                       </p>
-                                    </div>
-                                 </div>
-                              </a>
-                              <!-- END list group item-->
-                              <!-- START list group item-->
-                              <a href=" <?php echo base_url(); ?>47admin/#" class="list-group-item">
-                                 <div class="media">
-                                    <div class="pull-left">
-                                       <img style="width: 48px; height: 48px;" src=" <?php echo base_url(); ?>47admin/app/img/user/06.jpg" alt="Image" class="media-object img-rounded">
-                                    </div>
-                                    <div class="media-body clearfix">
-                                       <small class="pull-right">4h</small>
-                                       <strong class="media-heading text-primary">
-                                          <div class="point point-danger point-lg"></div>Carolyn Carpenter</strong>
-                                       <p class="mb-sm">
-                                          <small>Cras sit amet nibh libero, in gravida nulla. Nulla...</small>
-                                       </p>
-                                    </div>
-                                 </div>
-                              </a>
-                              <!-- END list group item-->
-                           </div>
-                           <!-- END list group-->
-                        </div>
-                     </li>
-                     <!-- START dropdown footer-->
-                     <li class="p">
-                        <a href=" <?php echo base_url(); ?>47admin/#" class="text-center">
-                           <small class="text-primary">READ ALL</small>
-                        </a>
-                     </li>
-                     <!-- END dropdown footer-->
-                  </ul>
-                  <!-- END Dropdown menu-->
-               </li>
-               <!-- END Messages menu (dropdown-list)-->
-               <!-- START Alert menu-->
-               <li class="dropdown dropdown-list">
-                  <a href=" <?php echo base_url(); ?>47admin/#" data-toggle="dropdown" data-play="bounceIn" class="dropdown-toggle">
-                     <em class="fa fa-bell"></em>
-                     <div class="label label-info">120</div>
-                  </a>
-                  <!-- START Dropdown menu-->
-                  <ul class="dropdown-menu">
-                     <li>
-                        <!-- START list group-->
-                        <div class="list-group">
-                           <!-- list item-->
-                           <a href=" <?php echo base_url(); ?>47admin/#" class="list-group-item">
-                              <div class="media">
-                                 <div class="pull-left">
-                                    <em class="fa fa-envelope-o fa-2x text-success"></em>
-                                 </div>
-                                 <div class="media-body clearfix">
-                                    <div class="media-heading">Unread messages</div>
-                                    <p class="m0">
-                                       <small>You have 10 unread messages</small>
-                                    </p>
-                                 </div>
-                              </div>
-                           </a>
-                           <!-- list item-->
-                           <a href=" <?php echo base_url(); ?>47admin/#" class="list-group-item">
-                              <div class="media">
-                                 <div class="pull-left">
-                                    <em class="fa fa-cog fa-2x"></em>
-                                 </div>
-                                 <div class="media-body clearfix">
-                                    <div class="media-heading">New settings</div>
-                                    <p class="m0">
-                                       <small>There are new settings available</small>
-                                    </p>
-                                 </div>
-                              </div>
-                           </a>
-                           <!-- list item-->
-                           <a href=" <?php echo base_url(); ?>47admin/#" class="list-group-item">
-                              <div class="media">
-                                 <div class="pull-left">
-                                    <em class="fa fa-fire fa-2x"></em>
-                                 </div>
-                                 <div class="media-body clearfix">
-                                    <div class="media-heading">Updates</div>
-                                    <p class="m0">
-                                       <small>There are
-                                          <span class="text-primary">2</span>new updates available</small>
-                                    </p>
-                                 </div>
-                              </div>
-                           </a>
-                           <!-- last list item -->
-                           <a href=" <?php echo base_url(); ?>47admin/#" class="list-group-item">
-                              <small>Unread notifications</small>
-                              <span class="badge">14</span>
-                           </a>
-                        </div>
-                        <!-- END list group-->
-                     </li>
-                  </ul>
-                  <!-- END Dropdown menu-->
-               </li>
-               <!-- END Alert menu-->
-               <!-- START User menu-->
+
                <li class="dropdown">
                   <a href=" <?php echo base_url(); ?>47admin/#" data-toggle="dropdown" data-play="bounceIn" class="dropdown-toggle">
                      <em class="fa fa-user"></em>
                   </a>
                   <!-- START Dropdown menu-->
                   <ul class="dropdown-menu">
-                     <li>
-                        <div class="p">
-                           <p>Overall progress</p>
-                           <div class="progress progress-striped progress-xs m0">
-                              <div role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;" class="progress-bar progress-bar-success">
-                                 <span class="sr-only">80% Complete</span>
-                              </div>
-                           </div>
-                        </div>
-                     </li>
+
                      <li class="divider"></li>
-                     <li><a href=" <?php echo base_url(); ?>47admin/#">Perfil</a>
+    <!--                  <li><a href=" <?php echo base_url(); ?>47admin/#">Perfil</a>
                      </li>
                      <li><a href=" <?php echo base_url(); ?>47admin/#">Ajustes</a>
                      </li>
                      <li><a href=" <?php echo base_url(); ?>47admin/#">Notificaciones<div class="label label-info pull-right">5</div></a>
                      </li>
                      <li><a href=" <?php echo base_url(); ?>47admin/#">Mensajes<div class="label label-danger pull-right">10</div></a>
-                     </li>
+                     </li> -->
                      <li><a href="<?php echo base_url(); ?>index.php/usuarios/logout">Cerrar Sesión</a>
                      </li>
                   </ul>
                   <!-- END Dropdown menu-->
                </li>
-               <!-- END User menu-->
-               <!-- START Contacts button-->
-               <li>
-                  <a href=" <?php echo base_url(); ?>47admin/#" data-toggle="offsidebar">
-                     <em class="fa fa-align-right"></em>
-                  </a>
-               </li>
-               <!-- END Contacts menu-->
             </ul>
             <!-- END Right Navbar-->
          </div>
-         <!-- END Nav wrapper-->
-         <!-- START Search form-->
-         <form role="search" class="navbar-form">
-            <div class="form-group has-feedback">
-               <input type="text" placeholder="Type and hit Enter.." class="form-control">
-               <div data-toggle="navbar-search-dismiss" class="fa fa-times form-control-feedback"></div>
-            </div>
-            <button type="submit" class="hidden btn btn-default">Submit</button>
-         </form>
-         <!-- END Search form-->
       </nav>
       <!-- END Top Navbar-->
       <!-- START aside-->
@@ -334,14 +123,14 @@
                   </div>
                   <!-- START User links collapse-->
                   <ul class="nav collapse">
-                     <li><a href=" <?php echo base_url(); ?>47admin/#">Perfil</a>
+<!--                      <li><a href=" <?php echo base_url(); ?>47admin/#">Perfil</a>
                      </li>
                      <li><a href=" <?php echo base_url(); ?>47admin/#">Ajustes</a>
                      </li>
                      <li><a href=" <?php echo base_url(); ?>47admin/#">Notificaciones<div class="label label-danger pull-right">120</div></a>
                      </li>
                      <li><a href=" <?php echo base_url(); ?>47admin/#">Mensajes<div class="label label-success pull-right">300</div></a>
-                     </li>
+                     </li> -->
                      <li class="divider"></li>
                      <li><a href=" <?php echo base_url(); ?>47admin/#">Cerrar Sesión</a>
                      </li>
@@ -363,7 +152,7 @@
                            <span class="item-text">Inicio</span>
                         </a>
                      </li>
-                     <li>
+<!--                      <li>
                         <a href="<?php echo base_url(); ?>index.php/usuarios/inicio" title="No Sidebar" data-toggle="" class="no-submenu">
                            <span class="item-text">Inicio 2</span>
                         </a>
@@ -372,7 +161,7 @@
                         <a href=" <?php echo base_url(); ?>47admin/dashboard-noprofile.html" title="No Profile" data-toggle="" class="no-submenu">
                            <span class="item-text">Cerrar Sesión</span>
                         </a>
-                     </li>
+                     </li> -->
                   </ul>
                   <!-- END SubMenu item-->
                </li>
@@ -403,11 +192,11 @@
                            <span class="item-text">Lista de Usuarios</span>
                         </a>
                      </li>
-                     <li>
+<!--                      <li>
                         <a href=" <?php echo base_url(); ?>47admin/chart-radial.html" title="Radial" data-toggle="" class="no-submenu">
                            <span class="item-text">Estado Usuarios</span>
                         </a>
-                     </li>
+                     </li> -->
                   </ul>
                   <!-- END SubMenu item-->
                </li>
@@ -457,11 +246,11 @@
                   <!-- START SubMenu item-->
                   <ul class="nav collapse ">
                      <li>
-                        <a href=" <?php echo base_url(); ?>47admin/form-standard.html" title="Standard" data-toggle="" class="no-submenu">
+                        <a href="" title="Standard" data-toggle="" class="no-submenu">
                            <span class="item-text">Lista de Clientes</span>
                         </a>
                      </li>
-                     <li>
+   <!--                   <li>
                         <a href=" <?php echo base_url(); ?>47admin/form-extended.html" title="Extended" data-toggle="" class="no-submenu">
                            <span class="item-text">Agregar Cliente</span>
                         </a>
@@ -470,7 +259,7 @@
                         <a href=" <?php echo base_url(); ?>47admin/form-validation.html" title="Validation" data-toggle="" class="no-submenu">
                            <span class="item-text">Reporte Clientes</span>
                         </a>
-                     </li>
+                     </li> -->
                   </ul>
                   <!-- END SubMenu item-->
                </li>
@@ -486,7 +275,7 @@
                            <span class="item-text">Lista de Productos</span>
                         </a>
                      </li>
-                     <li>
+<!--                      <li>
                         <a href="<?php echo base_url(); ?>index.php/smartphones/listasmartphones" title="Landing" data-toggle="" class="no-submenu">
                            <span class="item-text">Lista Smartphones</span>
                         </a>
@@ -495,7 +284,7 @@
                         <a href=" <?php echo base_url(); ?>47admin/form-validation.html" title="Validation" data-toggle="" class="no-submenu">
                            <span class="item-text">Reporte Clientes</span>
                         </a>
-                     </li>
+                     </li> -->
                   </ul>
                   <!-- END SubMenu item-->
                </li>
@@ -516,21 +305,26 @@
                ?>
 
 
-               <li>
+              <li>
                   <a href=" <?php echo base_url(); ?>47admin/#" title="Forms" data-toggle="collapse-next" class="has-submenu">
-                     <em class="fa fa-money fa-2x"></em>
-                     <span class="item-text">Estado de Ventas</span>
+                     <em class="fa fa-folder-open fa-2x"></em>
+                     <span class="item-text">Reportes</span>
                   </a>
                   <!-- START SubMenu item-->
                   <ul class="nav collapse ">
                      <li>
-                        <a href=" <?php echo base_url(); ?>47admin/form-standard.html" title="Standard" data-toggle="" class="no-submenu">
-                           <span class="item-text">Tabla Ventas</span>
+                        <a href="<?php echo base_url(); ?>index.php/reportes/listareporteventas" title="Standard" data-toggle="" class="no-submenu">
+                           <span class="item-text">Reporte de Ventas</span>
                         </a>
                      </li>
                      <li>
-                        <a href=" <?php echo base_url(); ?>47admin/form-extended.html" title="Extended" data-toggle="" class="no-submenu">
-                           <span class="item-text">Reporte Ventas</span>
+                        <a href="<?php echo base_url(); ?>index.php/reportes/listareporteproductos" title="Extended" data-toggle="" class="no-submenu">
+                           <span class="item-text">Reporte Ventas por Productos</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="<?php echo base_url(); ?>index.php/reportes/listareporteusuarios" title="Extended" data-toggle="" class="no-submenu">
+                           <span class="item-text">Reporte Ventas por Usuario</span>
                         </a>
                      </li>
                   </ul>
@@ -556,11 +350,11 @@
                            <span class="item-text">Realizar una Venta</span>
                         </a>
                      </li>
-                     <li>
+ <!--                     <li>
                         <a href=" <?php echo base_url(); ?>47admin/form-extended.html" title="Extended" data-toggle="" class="no-submenu">
                            <span class="item-text">Reporte Ventas</span>
                         </a>
-                     </li>
+                     </li> -->
                   </ul>
                   <!-- END SubMenu item-->
                </li>
@@ -576,13 +370,12 @@
 
 
 
-
+<!-- 
                <li>
                   <a href=" <?php echo base_url(); ?>47admin/#" title="Elements" data-toggle="collapse-next" class="has-submenu">
                      <em class="fa fa-shopping-cart fa-2x"></em>
                      <span class="item-text">Compras</span>
                   </a>
-                  <!-- START SubMenu item-->
                   <ul class="nav collapse ">
                      <li>
                         <a href="<?php echo base_url(); ?>index.php/smartphones/comprarsmartphones" title="Panels" data-toggle="" class="no-submenu">
@@ -600,8 +393,12 @@
                         </a>
                      </li>
                   </ul>
-                  <!-- END SubMenu item-->
-               </li>
+               </li> -->
+
+
+
+
+               
                <!-- END Menu-->
                <!-- Sidebar footer    -->
                <li class="nav-footer">
