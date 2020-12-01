@@ -47,7 +47,7 @@
       <nav role="navigation" class="navbar navbar-default navbar-top navbar-fixed-top">
          <!-- START navbar header-->
          <div class="navbar-header">
-            <a href=" <?php echo base_url(); ?>47admin/#" class="navbar-brand">
+            <a href="#" class="navbar-brand">
                <div class="brand-logo">Digital Shop</div>
                <div class="brand-logo-collapsed">Inicio</div>
             </a>
@@ -86,20 +86,19 @@
                      <!-- Name and Role-->
                      <div class="user-block-info">
                         <span class="user-block-name item-text">Bienvenido, <?php echo $this->session->userdata('usuario'); ?></span>
-                        <span class="user-block-role">Administrador</span>
+                        <span class="user-block-role">
+                           <?php  
+                              $idusuario = $this->session->userdata('idusuario');
+                              $consult = $this->usuario_model->obtenercargo($idusuario);
+                              echo $consult[0]->rolusuario;
+                           ?>
+                        </span>
                         <!-- END Dropdown to change status-->
                      </div>
                   </div>
                   <!-- START User links collapse-->
                   <ul class="nav collapse">
-                     <li><a href=" <?php echo base_url(); ?>47admin/#">Perfil</a>
-                     </li>
-                     <li><a href=" <?php echo base_url(); ?>47admin/#">Ajustes</a>
-                     </li>
-                     <li><a href=" <?php echo base_url(); ?>47admin/#">Notificaciones<div class="label label-danger pull-right">120</div></a>
-                     </li>
-                     <li><a href=" <?php echo base_url(); ?>47admin/#">Mensajes<div class="label label-success pull-right">300</div></a>
-                     </li>
+ 
                      <li class="divider"></li>
                      <li><a href=" <?php echo base_url(); ?>47admin/#">Cerrar Sesión</a>
                      </li>
@@ -122,18 +121,24 @@
                         </a>
                      </li>
                      <li>
-                        <a href="<?php echo base_url(); ?>index.php/usuarios/inicio" title="No Sidebar" data-toggle="" class="no-submenu">
-                           <span class="item-text">Inicio 2</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href=" <?php echo base_url(); ?>47admin/dashboard-noprofile.html" title="No Profile" data-toggle="" class="no-submenu">
+                        <a href="<?php echo base_url(); ?>index.php/usuarios/logout" title="No Profile" data-toggle="" class="no-submenu">
                            <span class="item-text">Cerrar Sesión</span>
                         </a>
                      </li>
                   </ul>
                   <!-- END SubMenu item-->
                </li>
+               <?php
+
+               $idusuario = $this->session->userdata('idusuario');
+               $consult = $this->usuario_model->obtenercargo($idusuario);
+               $rol = $consult[0]->rolusuario;
+
+
+               if ($rol == 'Administrador' ) {
+               ?>
+
+
                <li>
                   <a href=" <?php echo base_url(); ?>47admin/#" title="Charts" data-toggle="collapse-next" class="has-submenu">
                      <em class="fa fa-user fa-2x"></em>
@@ -146,14 +151,20 @@
                            <span class="item-text">Lista de Usuarios</span>
                         </a>
                      </li>
-                     <li>
+<!--                      <li>
                         <a href=" <?php echo base_url(); ?>47admin/chart-radial.html" title="Radial" data-toggle="" class="no-submenu">
                            <span class="item-text">Estado Usuarios</span>
                         </a>
-                     </li>
+                     </li> -->
                   </ul>
                   <!-- END SubMenu item-->
                </li>
+
+
+
+               <?php
+               }
+               ?>
                <!--
                <li>
                   <a href=" <?php echo base_url(); ?>47admin/#" title="Tables" data-toggle="collapse-next" class="has-submenu">
@@ -187,18 +198,8 @@
                   <!-- START SubMenu item-->
                   <ul class="nav collapse ">
                      <li>
-                        <a href=" <?php echo base_url(); ?>47admin/form-standard.html" title="Standard" data-toggle="" class="no-submenu">
+                        <a href="#" title="Standard" data-toggle="" class="no-submenu">
                            <span class="item-text">Lista de Clientes</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href=" <?php echo base_url(); ?>47admin/form-extended.html" title="Extended" data-toggle="" class="no-submenu">
-                           <span class="item-text">Agregar Cliente</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href=" <?php echo base_url(); ?>47admin/form-validation.html" title="Validation" data-toggle="" class="no-submenu">
-                           <span class="item-text">Reporte Clientes</span>
                         </a>
                      </li>
                   </ul>
@@ -216,20 +217,55 @@
                            <span class="item-text">Lista de Productos</span>
                         </a>
                      </li>
+                  </ul>
+                  <!-- END SubMenu item-->
+               </li>
+
+               <?php
+
+               $idusuario = $this->session->userdata('idusuario');
+               $consult = $this->usuario_model->obtenercargo($idusuario);
+               $rol = $consult[0]->rolusuario;
+
+
+               if ($rol == 'Administrador' ) {
+               ?>
+
+
+               <li>
+                  <a href=" <?php echo base_url(); ?>47admin/#" title="Forms" data-toggle="collapse-next" class="has-submenu">
+                     <em class="fa fa-folder-open fa-2x"></em>
+                     <span class="item-text">Reportes</span>
+                  </a>
+                  <!-- START SubMenu item-->
+                  <ul class="nav collapse ">
                      <li>
-                        <a href="<?php echo base_url(); ?>index.php/smartphones/listasmartphones" title="Landing" data-toggle="" class="no-submenu">
-                           <span class="item-text">Lista Smartphones</span>
+                        <a href="<?php echo base_url(); ?>index.php/reportes/listareporteventas" title="Standard" data-toggle="" class="no-submenu">
+                           <span class="item-text">Reporte de Ventas</span>
                         </a>
                      </li>
                      <li>
-                        <a href=" <?php echo base_url(); ?>47admin/form-validation.html" title="Validation" data-toggle="" class="no-submenu">
-                           <span class="item-text">Reporte Clientes</span>
+                        <a href="<?php echo base_url(); ?>index.php/reportes/listareporteproductos" title="Extended" data-toggle="" class="no-submenu">
+                           <span class="item-text">Reporte Ventas por Productos</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="<?php echo base_url(); ?>index.php/reportes/listareporteusuarios" title="Extended" data-toggle="" class="no-submenu">
+                           <span class="item-text">Reporte Ventas por Usuario</span>
                         </a>
                      </li>
                   </ul>
                   <!-- END SubMenu item-->
                </li>
-               <li>
+
+
+
+               <?php
+               }
+               else
+               {
+                  ?>
+                  <li>
                   <a href=" <?php echo base_url(); ?>47admin/#" title="Forms" data-toggle="collapse-next" class="has-submenu">
                      <em class="fa fa-money fa-2x"></em>
                      <span class="item-text">Ventas</span>
@@ -237,24 +273,29 @@
                   <!-- START SubMenu item-->
                   <ul class="nav collapse ">
                      <li>
-                        <a href=" <?php echo base_url(); ?>47admin/form-standard.html" title="Standard" data-toggle="" class="no-submenu">
-                           <span class="item-text">Tabla Ventas</span>
+                        <a href="<?php echo base_url(); ?>index.php/ventas/listaventas" title="Standard" data-toggle="" class="no-submenu">
+                           <span class="item-text">Realizar una Venta</span>
                         </a>
                      </li>
-                     <li>
+<!--                      <li>
                         <a href=" <?php echo base_url(); ?>47admin/form-extended.html" title="Extended" data-toggle="" class="no-submenu">
-                           <span class="item-text">Reporte Ventas</span>
+                           <span class="item-text">--------</span>
                         </a>
-                     </li>
+                     </li> -->
                   </ul>
                   <!-- END SubMenu item-->
                </li>
-               <li>
+                  <?php
+               }
+               ?>
+
+
+               
+<!--                <li>
                   <a href=" <?php echo base_url(); ?>47admin/#" title="Elements" data-toggle="collapse-next" class="has-submenu">
                      <em class="fa fa-shopping-cart fa-2x"></em>
                      <span class="item-text">Compras</span>
                   </a>
-                  <!-- START SubMenu item-->
                   <ul class="nav collapse ">
                      <li>
                         <a href="<?php echo base_url(); ?>index.php/smartphones/comprarsmartphones" title="Panels" data-toggle="" class="no-submenu">
@@ -272,8 +313,11 @@
                         </a>
                      </li>
                   </ul>
-                  <!-- END SubMenu item-->
-               </li>
+               </li> -->
+
+
+
+
                <!-- END Menu-->
                <!-- Sidebar footer    -->
                <li class="nav-footer">
