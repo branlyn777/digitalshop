@@ -1,11 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="ie ie6 lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="ie ie7 lt-ie9 lt-ie8"        lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="ie ie8 lt-ie9"               lang="en"> <![endif]-->
-<!--[if IE 9]>    <html class="ie ie9"                      lang="en"> <![endif]-->
-<!--[if !IE]><!-->
 <html lang="en" class="no-ie">
-<!--<![endif]-->
 
 <head>
    <!-- Meta-->
@@ -43,7 +37,6 @@
         margin:0;
         padding:0;
         font-family: sans-serif;
-        /*background: linear-gradient(#141e30, #243b55);*/
       }
 
       .login-box {
